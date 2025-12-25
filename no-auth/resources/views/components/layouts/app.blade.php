@@ -6,7 +6,7 @@
 
         <title>{{ $title ?? 'Page Title' }}</title>
         <!-- styles / scripts -->
-        @vite('resources/js/app.js')
+        @vite(['resources/js/app.js'])
     </head>
     <body>
         <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
