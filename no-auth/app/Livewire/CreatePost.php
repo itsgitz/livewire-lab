@@ -13,9 +13,9 @@ class CreatePost extends Component
 
     public function save()
     {
-        $this->validate();
+        $validated = $this->validate();
 
-        Post::create($this->form->only(["title", "content"]));
+        Post::create($validated);
 
         session()->flash("success", "Post created successfully!");
 

@@ -18,4 +18,9 @@ class Post extends Model
     {
         return $query->where("is_published", true);
     }
+
+    public function publish(string $id)
+    {
+        $this::find($id)->update(["is_published" => true]);
+    }
 }
